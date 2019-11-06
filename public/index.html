@@ -9,7 +9,7 @@
 
   <link rel='icon' href='favicon.ico' type='image/x-icon' >
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="img/icon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://kit.fontawesome.com/ddc68dbc81.js" crossorigin="anonymous"></script>
@@ -28,7 +28,7 @@
   <div id="container" class="container">
     <header>
       <a href="index.html" id="logo"><img src="img/transparentLogo.png" alt="logo"></a>
-      <div class="drawer_toggle">
+      <div id="drawer_toggle">
         <div></div>
         <div></div>
         <div></div>
@@ -37,10 +37,19 @@
         <ul id="nav-menu">
           <li class="menu-item"><a href="index.html">Home</a></li>
           <li class="menu-item"><a href="Events.html">Events</a></li>
-          <li class="menu-item"><a>Donate</a></li>
+          <li class="menu-item"><a href="Donate.html">Donate</a></li>
         </ul>
       </nav>
     </header>
+    <div id="sidebar" class="sidebar">
+      <nav id="mobile-menu">
+        <ul>
+          <li class="mobile-menu-item"><a href="index.html">Home</a></li>
+          <li class="mobile-menu-item"><a href="Events.html">Events</a></li>
+          <li class="mobile-menu-item"><a href="Donate.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
     <main id="main">
       <section id="banner-section">
         <h1 id="home-page-h1">Ambassadors for Christ Outreach Ministry</h1>
@@ -96,6 +105,45 @@
   <!--    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')-->
   <!--  </script>-->
   <!--  <script src="https://www.google-analytics.com/analytics.js" async></script>-->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.2.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.2.2/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+  <script>
+	  let status = false;
+	  let dw = document.getElementById("drawer_toggle");
+	  let sidebar = document.getElementById("sidebar");
+
+	  dw.onclick = function () {
+		  toggle_drawer();
+	  };
+
+	  function openMobile() {
+		  sidebar.style.display = "block";
+		  status = true;
+	  }
+
+	  function closeMobile(){
+		  sidebar.style.display = "none";
+		  status = false;
+	  }
+
+	  function toggle_drawer(){
+		  if (status){
+			  closeMobile();
+		  }
+		  else {
+			  openMobile();
+		  }
+	  }
+
+  </script>
 </body>
 
 </html>

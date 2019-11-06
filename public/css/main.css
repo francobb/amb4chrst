@@ -129,7 +129,7 @@ a#logo {
   padding: 10px 0;
 }
 
-.drawer_toggle {
+#drawer_toggle {
   display: none;
   width: 40px;
   height: 100%;
@@ -147,7 +147,7 @@ a#logo {
   cursor: pointer;
 }
 
-.drawer_toggle div {
+#drawer_toggle div {
   width: 90%;
   height: 3px;
   background-color: black;
@@ -159,12 +159,56 @@ nav {
 
 #nav-menu {
   display: flex;
-  font-size: 25px;
-  margin-top: 35px;
+  font-size: 30px;
+  margin-top: 40px;
+  padding-right: 20px;
 }
 
 .menu-item {
   margin-left: 45px;
+}
+
+li.menu-item a {
+  text-decoration: none;
+}
+
+.sidebar {
+  display: none;
+  position: fixed;
+  width: 215px;
+  max-width: 70%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background-color: #fff;
+  padding: 32px 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  -o-transition: transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+
+}
+
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+.sidebar li {
+  margin: 20px;
+}
+
+.sidebar li a {
+  text-decoration: none;
 }
 
 #main{
@@ -172,7 +216,7 @@ nav {
 }
 
 #main section{
-  padding-top: 25px;
+  padding-top: 35px;
 }
 
 #main h1 {
@@ -235,93 +279,72 @@ div#home-photo-container {
   color:steelblue;
 }
 
+#events-container {
+  /*display: inline-flex;*/
+  max-width: 90%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+
+#donate-section div {
+  height: 740px;
+}
+
+.fundraiser_slider_2.slider_container {
+  /*display: inline;*/
+}
+
+.slider_container {
+  max-width: 100%;
+  /*display: inline-flex;*/
+  text-align: center;
+  margin: 15px auto;
+  padding: 10px;
+  /*width: 850px;*/
+  height: 673px;
+  background-color: lavenderblush;
+  border-radius: 15px;
+}
+
+.slider_container img {
+  max-width: 85%;
+  margin: 0 auto;
+
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.slider-header {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8em;
+  letter-spacing: 0.08em;
+  font-weight: 300;
+  color: #163965;
+  text-shadow: 0 1px 1px #4a81c2;
+  text-transform: uppercase;
+}
+
+.divider-2 {
+  border-bottom: 1px solid #FFF;
+  background-color: #DADADA;
+  height: 1px;
+  margin: 0.5em 0px 1.5em;
+}
+
+.divider-2 span {
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: #1589FF;
+}
+
 #footer-container {
   padding: 20px;
   background-color: #3a3a3a;
   color: whitesmoke;
   text-align: center;
-}
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-  display: none !important;
-}
-
-/*
-* Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*
-* 1. For long content, line feeds are not interpreted as spaces and small width
-*    causes content to wrap 1 word per line:
-*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-*/
-
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
-
-/*
-* Extends the .sr-only class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
-
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
-* Hide visually and from screen readers, but maintain layout
-*/
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.clearfix:after {
-  clear: both;
 }
 
 /* ==========================================================================
@@ -338,9 +361,10 @@ div#home-photo-container {
   #logo img {
     max-width: 50px;
   }
-  nav { display: none }
+  #nav-menu { display: none }
   header {
-    height: 55px;
+    /*height: 55px;*/
+    height: 66px;
     width: 100%;
     position: fixed;
     /* top: 0; */
@@ -357,11 +381,17 @@ div#home-photo-container {
     box-sizing: border-box;
     /* z-index: 90; */
   }
-  .drawer_toggle {
+  #drawer_toggle {
     display: flex;
   }
   #main h1 {
     margin-top: 25px;
+  }
+  #donate-section div {
+    height: 800px;
+  }
+  #donate-section h1 {
+    margin-top: 45px;
   }
 
 }

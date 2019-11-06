@@ -2,14 +2,14 @@
 <html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
-  <title>Ambassadors for Christ | Outreach</title>
+  <title>Ambassadors for Christ | Donate</title>
   <meta name="description" content="Ambassadors for Christ Outreach Ministry | Missionary">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fafafa">
 
   <link rel='icon' href='favicon.ico' type='image/x-icon' >
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="img/icon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://kit.fontawesome.com/ddc68dbc81.js" crossorigin="anonymous"></script>
@@ -28,7 +28,7 @@
 <div id="container" class="container">
   <header>
     <a href="index.html" id="logo"><img src="img/transparentLogo.png" alt="logo"></a>
-    <div class="drawer_toggle">
+    <div id="drawer_toggle">
       <div></div>
       <div></div>
       <div></div>
@@ -37,16 +37,29 @@
       <ul id="nav-menu">
         <li class="menu-item"><a href="index.html">Home</a></li>
         <li class="menu-item"><a href="Events.html">Events</a></li>
-        <li class="menu-item"><a>Donate</a></li>
+        <li class="menu-item"><a href="Donate.html">Donate</a></li>
       </ul>
     </nav>
   </header>
+  <div id="sidebar" class="sidebar">
+    <nav id="mobile-menu">
+      <ul>
+        <li class="mobile-menu-item"><a href="index.html">Home</a></li>
+        <li class="mobile-menu-item"><a href="Events.html">Events</a></li>
+        <li class="mobile-menu-item"><a href="Donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
   <main id="main">
-    <section id="promotional-section">
-    </section>
-    <section id="event-section">
-      <div id="events">
-      <!--  add slide show for different events  -->
+    <section id="donate-section">
+      <div>
+        <h1>
+          Please Send your Donations to:
+          <br>
+          <span>@AmbassadorsMission</span>
+          <br>
+          On Venmo & Cash App
+        </h1>
       </div>
     </section>
   </main>
@@ -56,12 +69,34 @@
     </div>
   </footer>
 </div>
+<script>
+  let status = false;
+  let dw = document.getElementById("drawer_toggle");
+  let sidebar = document.getElementById("sidebar");
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<!--  <script>-->
-<!--    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;-->
-<!--    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')-->
-<!--  </script>-->
-<!--  <script src="https://www.google-analytics.com/analytics.js" async></script>-->
+  dw.onclick = function () {
+  	toggle_drawer();
+  };
+
+  function openMobile() {
+	  sidebar.style.display = "block";
+  	status = true;
+  }
+
+  function closeMobile(){
+	  sidebar.style.display = "none";
+	  status = false;
+  }
+
+  function toggle_drawer(){
+  	if (status){
+  		closeMobile();
+    }
+  	else {
+  		openMobile();
+    }
+  }
+
+</script>
 </body>
 </html>

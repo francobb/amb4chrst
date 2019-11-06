@@ -1,0 +1,166 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title>Ambassadors for Christ | Events</title>
+  <meta name="description" content="Ambassadors for Christ Outreach Ministry | Missionary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
+
+  <link rel='icon' href='favicon.ico' type='image/x-icon' >
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="img/icon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet'>
+
+  <script src="https://kit.fontawesome.com/ddc68dbc81.js" crossorigin="anonymous"></script>
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<div id="container" class="container">
+  <header>
+    <a href="index.html" id="logo"><img src="img/transparentLogo.png" alt="logo"></a>
+    <div id="drawer_toggle" >
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul id="nav-menu">
+        <li class="menu-item"><a href="index.html">Home</a></li>
+        <li class="menu-item"><a href="Events.html">Events</a></li>
+        <li class="menu-item"><a href="Donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="sidebar" class="sidebar" >
+    <nav id="mobile-menu">
+      <ul>
+        <li class="mobile-menu-item"><a href="index.html">Home</a></li>
+        <li class="mobile-menu-item"><a href="Events.html">Events</a></li>
+        <li class="mobile-menu-item"><a href="Donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </div >
+  <main id="main">
+    <section id="promotional-section">
+    </section>
+    <section id="event-section">
+      <div id="events-container">
+      <!--  add slide show for different events  -->
+        <div class="fundraiser_slider_2 slider_container">
+          <h2 class="slider-header">1st Trip to Haiti</h2>
+          <img class="slide_" src="img/haiti_trip_1/IMG_1502.jpeg" alt="pic4" style="width: 722px; height: 540px; object-fit: cover;">
+          <!-- <img class="slide_" src="img/haiti_trip_1/IMG_1485.JPG.jpg" alt="donation" style="transform: rotate(90deg); ">-->
+          <img class="slide_" src="img/haiti_trip_1/IMG_1488.JPG.jpg" alt="pic1" style="width: 722px; height: 540px; object-fit: cover;">
+          <img class="slide_" src="img/haiti_trip_1/IMG_1491.JPG.jpg" alt="pic3">
+          <img class="slide_" src="img/haiti_trip_1/IMG_1499.jpg" alt="pic7" style="width: 722px; height: 540px; object-fit: cover;">
+          <img class="slide_" src="img/haiti_trip_1/IMG_1494.JPG.jpg" alt="pic4" style="width: 722px; height: 540px; object-fit: cover;">
+          <img class="slide_" src="img/haiti_trip_1/IMG_1533%202_edited.jpg" alt="donation">
+        </div>
+        <br>
+        <br>
+        <div class="divider-2"><span></span></div>
+        <div class="fundraiser_slider_1 slider_container">
+          <h2 class="slider-header">1st Annual Fundraiser</h2>
+          <img class="slide" src="img/fund_raiser_1/IMG_0185.JPG.jpg" alt="donation">
+          <img class="slide" src="img/fund_raiser_1/IMG_0198.JPG.jpg" alt="pic1">
+          <img class="slide" src="img/fund_raiser_1/IMG_0194.JPG.jpg" alt="pic3">
+          <img class="slide" src="img/fund_raiser_1/IMG_0196.JPG.jpg" alt="pic4">
+          <img class="slide" src="img/fund_raiser_1/IMG_0203.JPG.jpg" alt="pic5">
+          <img class="slide" src="img/fund_raiser_1/IMG_0202.JPG.jpg" alt="pic5">
+          <img class="slide" src="img/fund_raiser_1/IMG_0207.JPG.jpg" alt="pic7">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div id="footer-container">
+      <p>Email Us: <a href="mailto:mailto:Flora@ambassador4christ.org" style="color: #cccccc">Flora@ambassador4christ.org</a></p>
+    </div>
+  </footer>
+</div>
+
+<script>
+	let myIndex = 0;
+	carousel();
+
+	function carousel() {
+		let i;
+		let x = document.getElementsByClassName("slide");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}
+		x[myIndex-1].style.display = "block";
+
+    // let j;
+    // let p = document.getElementsByClassName("slide_");
+    // for (j = 0; j < p.length; j++) {
+    // 	p[j].style.display = "none";
+    // }
+    // otherIndex++;
+    // if (otherIndex > p.length) {otherIndex = 1}
+    // p[otherIndex-1].style.display = "block";
+
+		setTimeout(carousel, 3000);
+	}
+</script>
+<script>
+	let otherIndex = 0;
+	carousel1();
+
+	function carousel1(){
+		let j;
+		let p = document.getElementsByClassName("slide_");
+		for (j = 0; j < p.length; j++) {
+			p[j].style.display = "none";
+		}
+		otherIndex++;
+		if (otherIndex > p.length) {otherIndex = 1}
+		p[otherIndex-1].style.display = "block";
+
+		setTimeout(carousel1, 4000);
+  }
+</script>
+<script>
+	let status = false;
+	let dw = document.getElementById("drawer_toggle");
+	let sidebar = document.getElementById("sidebar");
+
+	dw.onclick = function () {
+		toggle_drawer();
+	};
+
+	function openMobile() {
+		sidebar.style.display = "block";
+		status = true;
+	}
+
+	function closeMobile(){
+		sidebar.style.display = "none";
+		status = false;
+	}
+
+	function toggle_drawer(){
+		if (status){
+			closeMobile();
+		}
+		else {
+			openMobile();
+		}
+	}
+
+</script>
+</body>
+</html>
