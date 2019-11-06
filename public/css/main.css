@@ -297,7 +297,7 @@ div#home-photo-container {
 
 .slider_container {
   max-width: 100%;
-  /*display: inline-flex;*/
+  display: inline-block;
   text-align: center;
   margin: 15px auto;
   padding: 10px;
