@@ -215,10 +215,6 @@ li.menu-item a {
   background-color: indianred;
 }
 
-#main section{
-  padding-top: 35px;
-}
-
 #main h1 {
   text-align: center;
   margin: 0 auto 20px auto;
@@ -297,7 +293,7 @@ div#home-photo-container {
 
 .slider_container {
   max-width: 100%;
-  display: inline-block;
+  /*display: inline-block;*/
   text-align: center;
   margin: 15px auto;
   padding: 10px;
@@ -377,7 +373,7 @@ div#home-photo-container {
     /* justify-content: space-between; */
     -ms-flex-align: center;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0 20px;
     /* -webkit-box-sizing: border-box; */
     box-sizing: border-box;
     /* z-index: 90; */
@@ -387,6 +383,9 @@ div#home-photo-container {
   }
   #main h1 {
     margin-top: 25px;
+  }
+  #main section{
+    padding-top: 35px;
   }
   #donate-section div {
     height: 800px;
@@ -406,6 +405,13 @@ div#home-photo-container {
 
   #about-us li:nth-child(1) {
     padding: 20px 15px;
+  }
+}
+
+@media (max-width: 998px) {
+  .slider_container {
+    width: 90%;
+    height: auto;
   }
 }
 
