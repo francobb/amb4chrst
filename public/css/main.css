@@ -10,6 +10,11 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@font-face {
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  font-weight: 400;
+}
 
 html {
   color: #222;
