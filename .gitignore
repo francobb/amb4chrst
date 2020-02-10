@@ -5,3 +5,6 @@
 /.idea/*
 /.idea/workspace.xml
 /.firebase/hosting.cHVibGlj.cache
+firebase.json
+.firebaserc
+.DS_Store
