@@ -131,7 +131,7 @@ a#logo {
 
 #logo img {
   width: fit-content;
-  max-width: 80px;
+  max-width: 60px;
   padding: 10px 0;
 }
 
@@ -161,12 +161,15 @@ a#logo {
 
 nav {
   color: darkred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #nav-menu {
   display: flex;
-  font-size: 30px;
-  margin-top: 40px;
+  font-size: 25px;
+  margin-top: 0;
   padding-right: 20px;
 }
 
